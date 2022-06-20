@@ -599,6 +599,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .items-center {
   align-items: center;
 }
