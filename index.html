@@ -5,26 +5,172 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
     <title>Easy Bank</title>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="relative container mx-auto p-6">
       <!-- Flex container -->
-      <div class="flex items-center justify-content">
+      <div class="flex items-center justify-between">
         <div class="pt-2">
           <img src="easybank-landing-page-master/images/logo.svg" alt="" />
         </div>
 
         <!-- Menu items -->
-        <div class="hiden space-x-6 md:flex">
-          <a href="#" class="text-DarkBlue">Home</a>
-          <a href="#" class="text-DarkBlue">About</a>
-          <a href="#" class="text-DarkBlue">Contact</a>
-          <a href="#" class="text-DarkBlue">Blog</a>
-          <a href="#" class="text-DarkBlue">Careers</a>
+        <div class="hidden space-x-6 md:flex">
+          <a href="#" class="text-GrayishBlue hover:text-DarkBlue">Home</a>
+          <a href="#" class="text-GrayishBlue hover:text-DarkBlue">About</a>
+          <a href="#" class="text-GrayishBlue hover:text-DarkBlue">Contact</a>
+          <a href="#" class="text-GrayishBlue hover:text-DarkBlue">Blog</a>
+          <a href="#" class="text-GrayishBlue hover:text-DarkBlue">Careers</a>
+        </div>
+        <!-- Button -->
+        <a
+          href="#"
+          class="hidden p-3 px-3 pt-2 text-white bg-LimeGreen rounded-full baseline md:block"
+          >Request Invite</a
+        >
+
+        <!-- Hamburger Icon -->
+        <button
+          id="menu-btn"
+          class="open block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute hidden flex-col items-center self-end py-8 mt-10 space-x-6 font-bold bg-White sm:w-auto sm:slef-center left-6 drop-shadow-md"
+        >
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
         </div>
       </div>
     </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-VeryLightGray">
+      <!-- Flex container -->
+      <div
+        class="container flex flex-col-reverse items-center px-6 mx-auto space-y-0 md:space-y-0 md:flex-row"
+      >
+        <!-- left item  -->
+        <div class="flex flex-col mb-32 space-y-12 md:w-1/8">
+          <h1 class="mx-w-md text-4xl text-center md:text-5xl md:text-left">
+            Next generation <br />
+            digital banking
+          </h1>
+          <p class="mx-w sm text-center text-DarkBlue md:text-left">
+            Take your financial life online.Your Easybankaccount <br />
+            will be a one-stop-shop for spending,saving <br />
+            badgeting,investing and much more
+          </p>
+          <div class="flex justify-center md:justify-start">
+            <a
+              href="#"
+              class="hidden p-3 px-3 pt-2 text-white bg-LimeGreen rounded-full baseline md:block"
+              >Request Invite</a
+            >
+          </div>
+        </div>
+        <!-- image -->
+        <div class="md:w-1/2 px-3 ml-40 items-start">
+          <img
+            src="easybank-landing-page-master/images/image-mockups.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-LightGrayishBlue">
+      <div
+        class="container flex flex-col px-4 mx-auto space-y-12 md:space-y-0 md:flex-row"
+      >
+        <div class="flex flex-col mt-20 mb-32 space-y-12 md:w-1/8">
+          <h1 class="mx-w-md text-3xl text-center md:text-5xl md:text-left">
+            Why choose Easybank?
+          </h1>
+
+          <p class="mx-w-sm text-center text-DarkBlue md:text-left">
+            We laverage Open Banking to turn your bank account into your
+            financial hub. <br />
+            Control your finances like never before.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="container flex-col px-4 mx-auto space-y-12 md:space-y-0 md:flex-row"
+      >
+        <div class="md:w-1/2 px-3">
+          <img
+            src="easybank-landing-page-master/images/icon-online.svg"
+            alt=""
+          />
+        </div>
+
+        <h1
+          class="mx-w-sm text-2xl text-start text-DarkBlue md:text-2xl md:text-left"
+        >
+          Online Banking
+        </h1>
+        <br />
+        <p class="mx-w-sm text-center text-DarkBlue md:text-left">
+          Our modern web and mobile <br />
+          Application allows you to keep <br />track of your finances wherever
+          <br />
+          your are in the world.
+        </p>
+      </div>
+    </section>
+
+    <section id="cards" class="bg-VeryLightGray pt-40">
+      <div class="flex flex-col mb-20 md:w-1/8">
+        <h1 class="mx-w-md text-2xl ml-60 text-center md:text-5xl md:text-left">
+          Latest Articles
+        </h1>
+      </div>
+      <div class="max-w-sm rounded-lg shadow-md ml-60 p-2">
+        <a href="#">
+          <img
+            class="rounded-t-lg"
+            src="/easybank-landing-page-master/images/image-currency.jpg"
+            alt=""
+          />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h5 class="text-2xl tracking-tight text-gray-900">
+              Recieve money in any <br />
+              currency with no fees
+            </h5>
+            <br />
+          </a>
+          <p class="mx-w-sm text-center text-DarkBlue md:text-left">
+            The world is getting smaller and <br />
+            we are becoming more mobile. So <br />
+            why should you be forced to only <br />
+            recieve money in a single....
+          </p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
